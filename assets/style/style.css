@@ -361,6 +361,36 @@ section {
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border-left: 4px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Ajuste para espaçamento interno */
+}
+
+/* Título do Curso (ex: Bacharelado) */
+.course-title {
+    margin-bottom: 0.8rem; /* Espaço para afastar do texto */
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Texto da Instituição/Descrição */
+.course-institution {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+
+/* Aumentar o respiro entre os tópicos (listas em geral) */
+ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Espaço para subtítulos em blocos de texto */
+h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
 }
 
 /* =========================================
@@ -453,16 +483,17 @@ section {
     font-size: 1.2rem;
 }
 
+
 /* =========================================
-   FOOTER PROFISSIONAL (ATUALIZADO)
+   FOOTER (VERSÃO CLEAN / UNIFICADA)
    ========================================= */
 .footer {
-    background-color: #ffffff;      /* Fundo Branco (mais clean) */
-    border-top: 1px solid #e2e8f0;  /* Linha fina cinza no topo */
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
     padding-top: 4rem;
     margin-top: 4rem;
     font-size: 0.95rem;
-    color: var(--text-dark);        /* Texto escuro para leitura */
+    color: var(--text-dark);
 }
 
 .footer-container {
@@ -480,7 +511,7 @@ section {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--primary-color); /* Azul da marca */
+    color: var(--primary-color);
 }
 
 .footer-desc {
@@ -492,8 +523,8 @@ section {
 
 .coren-badge {
     display: inline-block;
-    background-color: #ecfdf5;   /* Fundo verde bem claro */
-    color: #047857;              /* Texto verde escuro */
+    background-color: #ecfdf5;
+    color: #047857;
     padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid #d1fae5;
@@ -533,7 +564,7 @@ section {
 }
 
 .footer-links a, .footer-contact a {
-    color: var(--text-light); /* Cinza suave */
+    color: var(--text-light);
     text-decoration: none;
     transition: color 0.3s ease;
     display: inline-flex;
@@ -542,7 +573,7 @@ section {
 }
 
 .footer-links a:hover, .footer-contact a:hover {
-    color: var(--primary-color); /* Fica azul ao passar o mouse */
+    color: var(--primary-color);
     padding-left: 5px;
 }
 
@@ -563,9 +594,9 @@ section {
     text-decoration: none;
 }
 
-/* Barra Inferior */
+/* Barra Inferior (Créditos e Social) */
 .footer-bottom {
-    background-color: #f8fafc; /* Fundo cinza muito claro */
+    background-color: #f8fafc;
     padding: 1.5rem 0;
     border-top: 1px solid #f1f5f9;
 }
@@ -596,6 +627,7 @@ section {
     font-weight: 600;
 }
 
+/* Social Links - Versão Clean */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -620,86 +652,6 @@ section {
     color: white;
     transform: translateY(-3px);
     border-color: var(--primary-color);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
-    }
-
-    .footer-col h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .footer-logo { justify-content: center; }
-    .footer-desc { margin: 0 auto 1.5rem; }
-    
-    .bottom-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .copyright-text {
-        text-align: center;
-        align-items: center;
-    }
-}
-.bottom-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    color: #95a5a6;
-}
-
-/* Estilo para seus Créditos */
-.copyright-text {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.dev-credits {
-    font-size: 0.75rem;
-    opacity: 0.7;
-}
-
-.dev-credits a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.3s;
-}
-
-.dev-credits a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-links a {
-    color: white;
-    background-color: rgba(255,255,255,0.1);
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-3px);
 }
 
 /* =========================================
