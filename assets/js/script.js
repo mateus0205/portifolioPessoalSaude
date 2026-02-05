@@ -38,3 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-element');
+            }
+        });
+    });
+
+    // Seleciona o que você quer animar (Cards, Títulos, Timeline)
+    const hiddenElements = document.querySelectorAll('.card, .section-title, .hero-text, .timeline-item');
+    
+    hiddenElements.forEach((el) => {
+        el.classList.add('hidden-element'); // Adiciona a classe que esconde
+        observer.observe(el); // Começa a observar
+    });

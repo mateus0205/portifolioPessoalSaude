@@ -653,7 +653,18 @@ h3 {
     transform: translateY(-3px);
     border-color: var(--primary-color);
 }
+/* Classe para elementos ocultos inicialmente */
+.hidden-element {
+    opacity: 0;
+    transform: translateY(30px); /* Começa 30px para baixo */
+    transition: all 0.8s ease-out; /* Demora 0.8s para aparecer */
+}
 
+/* Classe quando o elemento aparece */
+.show-element {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* =========================================
            MEDIA QUERIES (RESPONSIVIDADE TOTAL)
            ========================================= */
