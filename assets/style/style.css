@@ -665,6 +665,7 @@ h3 {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* =========================================
            MEDIA QUERIES (RESPONSIVIDADE TOTAL)
            ========================================= */
@@ -701,7 +702,6 @@ h3 {
         margin: 0 auto;
     }
 }
-
 /* 3. Mobile Padrão (até 768px) */
 @media (max-width: 768px) {
     :root {
@@ -727,11 +727,26 @@ h3 {
         opacity: 1;
     }
     section { padding: 3.5rem 0; }
-    .timeline::before { left: 10px; }
-    .timeline-item { padding-left: 35px; }
-    .timeline-marker { left: 1px; }
 
-    /* Footer Mobile */
+    /* === AJUSTES DA TIMELINE ALINHADA === */
+    .timeline { 
+        width: 100%; 
+        padding: 0; 
+    }
+    .timeline::before { 
+        left: 15px; /* Fixa a linha cinza com recuo da borda */
+    }
+    .timeline-marker { 
+        left: 6px;  /* Centraliza a bolinha cirurgicamente em cima da linha */
+    }
+    .timeline-item { 
+        padding-left: 45px; /* Empurra o cartão para não encostar na linha */
+    }
+    .timeline-content {
+        padding: 1.2rem 1rem; /* Dá um respiro interno para os textos no mobile */
+    }
+
+    /* === FOOTER MOBILE === */
     .footer-container {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -750,6 +765,9 @@ h3 {
     .copyright-text {
         text-align: center;
         align-items: center;
+    }
+    .containerProfi{
+        margin-left: 20px;
     }
 }
 
